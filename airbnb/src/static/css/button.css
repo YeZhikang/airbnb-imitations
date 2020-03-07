@@ -1,0 +1,10 @@
+.normal{
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    background-color: transparent;
+    text-align: center;
+    padding: 10px 10px;
+    color: white;
+    font-weight: 400;
+    font-size: 13px;
+}
