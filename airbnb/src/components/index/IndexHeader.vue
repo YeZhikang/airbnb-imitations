@@ -59,8 +59,8 @@
                     dash.classList.add('dash-tab')
                     dash.appendChild(child)
                     this.activeDash ++;
-                },4500)
-            }
+                },8000)
+            },
         },
         mounted() {
             this.changeContainer()
@@ -121,8 +121,8 @@
     }
 
     .dash-active{
-        animation:turnColor 5s infinite ;
-        width: 15px;
+        animation:turnColor 8s ;
+        width: 20px;
         border-radius: 2px;
         height: 4px;
         background-color: white;
@@ -141,6 +141,6 @@
     }
 
     .dash-tab{
-        width: 15px;border-radius: 2px;
+        width: 20px;border-radius: 2px;
     }
 </style>

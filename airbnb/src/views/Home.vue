@@ -41,6 +41,23 @@
         >
           查看更多{{selected.name}}的房源
         </div>
+        <div class="normal-block" style="margin-top: 48px">
+          <h3 style="padding-bottom: 16px">爱彼迎旅行保障</h3>
+          <div class="card-normal">
+            <div class="card-item">
+              <img class="card-img" src="https://z1.muscache.cn/airbnb/static/5308a6c455e5061137f8ae9e9a9ac4fc.png" alt="">
+                <p class="card-intro"><span class="card-intro-title">安心房源保障</span>人工审核所有中国房源页面信息，入住更放心</p>
+            </div>
+            <div class="card-item">
+              <img class="card-img" src="https://z1.muscache.cn/airbnb/static/f142a9a066b66fcfea524d7c2f5dcf63.png" alt="">
+              <p class="card-intro"><span class="card-intro-title">专业中文客服</span>(86)400-022-1666、(86) 010-8783-3463，24 小时服务</p>
+            </div>
+            <div class="card-item">
+              <img class="card-img" src="https://z1.muscache.cn/airbnb/static/da0afd2d0100f3c056e5c6778c1bed22.png" alt="">
+              <p class="card-intro"><span class="card-intro-title">旅行安全保障</span>多重风险控制设计，全方位保障您的行程安全</p>
+            </div>
+          </div>
+        </div>
       </div >
     </div>
   </div>
@@ -49,6 +66,8 @@
 
 <script>
   import '../static/css/button.css'
+  import '../static/css/card.css'
+
   // @ is an alias to /src
   import IndexHeader from "../components/index/IndexHeader";
   export default {
@@ -124,6 +143,9 @@
     components: {IndexHeader},
     methods:{
       selectedCity(index){
+        if(index === this.recent){
+          return
+        }
         this.cityArr[index].isSelected = true
         this.cityArr[this.recent].isSelected = false
         this.recent = index

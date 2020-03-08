@@ -1,0 +1,38 @@
+.card-normal{
+    padding: 24px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 3px;
+}
+
+
+.card-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-img{
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+}
+
+.card-intro{
+    font-size: 14px;
+    padding-left: 16px;
+
+}
+
+.card-intro-title{
+    font-weight: 800;
+}
+
+.card-item{
+    font-weight: 400;
+    padding-bottom: 22px;
+}
+
+.card-item:last-child{
+    padding-bottom: 0;
+}
