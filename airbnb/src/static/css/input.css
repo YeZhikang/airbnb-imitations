@@ -2,3 +2,20 @@
     border: none;
 
 }
+
+.language-select{
+    border: solid 1px #dedede;
+    appearance: auto;
+    height: 46px;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: normal !important;
+    font-family: Circular, "PingFang-SC", "Hiragino Sans GB", "微软雅黑", "Microsoft YaHei", "Heiti SC"!important;
+    color:  #484848 !important;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+    font-weight: normal !important;
+    background-color: transparent !important;
+    padding-left: 11px !important;
+    padding-right:  40px !important;
+}

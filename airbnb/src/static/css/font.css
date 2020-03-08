@@ -38,3 +38,52 @@
     margin-left: 4px !important;
 
 }
+
+.exp-comment-num{
+    font-weight: bold !important;
+    color: #484848 !important;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    margin-right: 3px;
+}
+.exp-comment-num2{
+    font-weight: 400 !important;
+    color: #484848 !important;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    margin-left: 4px !important;
+}
+
+title{
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    line-height: 26px !important;
+}
+
+.city-name{
+    margin: 0px !important;
+    word-wrap: break-word !important;
+    font-family: Circular, "PingFang-SC", "Hiragino Sans GB", "微软雅黑", "Microsoft YaHei", "Heiti SC" !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    line-height: 1.2857142857142858em !important;
+    color: #484848 !important;
+}
+
+.city-intro{
+    margin: 0px !important;
+    word-wrap: break-word !important;
+    font-family: Circular, "PingFang-SC", "Hiragino Sans GB", "微软雅黑", "Microsoft YaHei", "Heiti SC" !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.2857142857142858em !important;
+    color: #484848 !important;
+}
+
+.link{
+    width: 45%;
+    font-size: 14px;
+    padding-bottom: 20px;
+    padding-left: 6px;
+    color: rgb(111,111,111);
+}

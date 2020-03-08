@@ -46,12 +46,23 @@
 
 .global-room{
     width: 49%;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
+    background-size: cover;
 }
 
 .global-room-image{
     width: 100%;
-    background-size: cover;
 }
 
+.storyImg{
+    border-radius: 8px;
 
+}
+
+.use-background{
+    width: 100%;
+    padding: 100% 0 0 0;
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 6px;
+}
