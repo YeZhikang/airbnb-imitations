@@ -46,7 +46,6 @@
                     let dash = document.getElementsByClassName('dash')[this.activeDash]
                     let preDash = document.getElementsByClassName('dash')[this.preDash]
                     if(!dash){
-                        console.log("not")
                         preDash = document.getElementsByClassName('dash')[this.activeDash - 1];
                         this.activeDash = 0
                         dash = document.getElementsByClassName('dash')[this.activeDash]
@@ -54,7 +53,6 @@
                     }else{
                         this.preDash ++;
                     }
-                    console.log(preDash.childNodes)
                     const child = preDash.childNodes[0]
                     preDash.removeChild(child)
                     preDash.classList.remove("dash-tab")
