@@ -14,7 +14,7 @@
   - 旅游内页大致框架完成
 
 ## 页面截图
-<div style="display:flex;justify-content: center;width:100%">
+<div style="display:flex;justify-content: center;width:100%;text-align:center">
 <img src="http://121.43.155.100:8081/static/mobile_airbnb_1.jpg" alt="IE / Edge" width="200px" />
 <img src="http://121.43.155.100:8081/static/mobile_airbnb_2.jpg" alt="IE / Edge" width="200px" />
 </div>
