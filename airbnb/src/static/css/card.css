@@ -36,3 +36,22 @@
 .card-item:last-child{
     padding-bottom: 0;
 }
+
+.global-room-block{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.global-room{
+    width: 49%;
+    padding-bottom: 25px;
+}
+
+.global-room-image{
+    width: 100%;
+    background-size: cover;
+}
+
+

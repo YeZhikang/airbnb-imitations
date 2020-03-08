@@ -1,0 +1,40 @@
+.span-normal{
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.room-context{
+    display: -webkit-box;
+    line-height: 17px;
+    overflow: hidden;
+    max-height: 34px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+
+.room-price{
+    display: -webkit-box !important;
+    overflow: hidden !important;
+    max-height: 22px !important;
+    text-overflow: ellipsis !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical !important;
+    word-break: break-all !important;
+    color: #484848 !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    height: 16px !important;
+    margin-bottom: 0px !important;
+}
+
+.room-comment-num{
+    font-weight: bold !important;
+    color: #484848 !important;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    margin-left: 4px !important;
+
+}

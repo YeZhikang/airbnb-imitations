@@ -34,10 +34,7 @@
           <div style="min-width: 6%"></div>
         </div>
         <div
-          class="normal"
-          style="font-size: 14px;
-            line-height: 20px;color: rgb(56,130,136);border-color: rgb(56,130,136);width: 88%;margin: 20px auto;
-            padding: 7px 0;font-weight: 500"
+          class="normal-cyan normal"
         >
           查看更多{{selected.name}}的房源
         </div>
@@ -58,6 +55,28 @@
             </div>
           </div>
         </div>
+        <div class="normal-block" style="margin-top: 48px;margin-bottom: 10px">
+          <h3 style="line-height: 0.8">全球热门房源精选</h3>
+          <span class="span-normal">精选舒适房源供你挑选</span>
+        </div>
+        <div class="global-room-block normal-block">
+          <div class="global-room" v-for="(room,index) in globalRoomArr" :key="index">
+            <img class="global-room-image" :src="room.imgURL" alt="img">
+            <p :style="{color:room.fontColor,fontSize:'12px',fontWeight:600}">{{room.baseInfo}}</p>
+            <p class="room-context" style="font-size: 14px;line-height: 16px;font-weight: 800;margin: 3px 0">{{room.context}}</p>
+            <p class="room-price">{{room.price}}</p>
+            <div style="display: flex;justify-content: flex-start;align-items: center">
+              <img src="../assets/stars.png" alt="5星" style="height: 16px">
+              <div class="room-comment-num">163</div>
+            </div>
+          </div>
+          <div
+                  class="normal-cyan normal"
+                  style="margin-top: 0"
+          >
+            查看更多房源
+          </div>
+        </div>
       </div >
     </div>
   </div>
@@ -67,6 +86,7 @@
 <script>
   import '../static/css/button.css'
   import '../static/css/card.css'
+  import '../static/css/font.css'
 
   // @ is an alias to /src
   import IndexHeader from "../components/index/IndexHeader";
@@ -137,7 +157,41 @@
           name: "成都",
           info: '19000+房源',
           isSelected: true,
-        }
+        },
+        globalRoomArr:[
+          {
+            baseInfo: '整套公寓 1室1卫1厅',
+            imgURL:'https://z1.muscache.cn/im/pictures/ac0a5754-031b-4d3e-a134-62593737ecf6.jpg?aki_policy=large',
+            context: 'Romantic 1 bed with stunning views',
+            price: '每晚 ¥771',
+            fontColor: '#734f21',
+            comments:127
+          },
+          {
+            baseInfo: '整套公寓 1室1卫1厅',
+            imgURL:'https://z1.muscache.cn/im/pictures/19755676/c2d3162d_original.jpg?aki_policy=large',
+            context: 'PORTA33 I PORTO PENTHOUSE Duplex at Rua das Flores',
+            price: '每晚 ¥771',
+            comments:127,
+            fontColor:'#341e13'
+          },
+          {
+            baseInfo: '整套公寓 1室1卫1厅',
+            imgURL:'https://z1.muscache.cn/im/pictures/881d76c6-4de6-4808-9f0b-36462b6c48a2.jpg?aki_policy=large',
+            context: 'SUNSET CAVE HOUSE IN OIA',
+            price: '每晚 ¥771',
+            comments:127,
+            fontColor:'#572533'
+          },
+          {
+            baseInfo: '整套公寓 1室1卫1厅',
+            imgURL:'https://z1.muscache.cn/im/pictures/38443604/307c98b4_original.jpg?aki_policy=large',
+            context: 'Cabin #3 - Alfie the A-Frame',
+            price: '每晚 ¥771',
+            comments:127,
+            fontColor: '#14275e'
+          }
+        ]
       }
     },
     components: {IndexHeader},
@@ -156,7 +210,7 @@
 </script>
 
 <style scoped>
-  *{
+  *:not(.normal){
     margin: 0;
   }
   .normal-block{

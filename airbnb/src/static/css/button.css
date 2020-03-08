@@ -8,3 +8,15 @@
     font-weight: 400;
     font-size: 13px;
 }
+
+
+.normal-cyan{
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(56,130,136);
+    border-color: rgb(56,130,136);
+    width: 88%;
+    margin: 20px auto;
+    padding: 7px 0;
+    font-weight: 500
+}
