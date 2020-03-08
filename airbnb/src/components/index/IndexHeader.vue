@@ -9,6 +9,14 @@
                 <p>{{presents[0].content}}</p>
                 <h3>{{presents[0].title}}</h3>
                 <div class="normal">查看合集</div>
+                <div style="margin-top: 15px;display: flex;justify-content: flex-start">
+                    <div class="dash dash-tab">
+                        <div class="dash-active"></div>
+                    </div>
+                    <div class="dash"></div>
+                    <div class="dash"></div>
+                    <div class="dash"></div>
+                </div>
             </div>
             <index-searching></index-searching>
         </div>
@@ -27,8 +35,37 @@
                         title:'周租、月租都可以',
                         content: '住久一点更像家'
                     }
-                ]
+                ],
+                activeDash:1,
+                preDash:0
             }
+        },
+        methods:{
+            changeContainer(){
+                setInterval(() => {
+                    let dash = document.getElementsByClassName('dash')[this.activeDash]
+                    let preDash = document.getElementsByClassName('dash')[this.preDash]
+                    if(!dash){
+                        console.log("not")
+                        preDash = document.getElementsByClassName('dash')[this.activeDash - 1];
+                        this.activeDash = 0
+                        dash = document.getElementsByClassName('dash')[this.activeDash]
+                        this.preDash = 0;
+                    }else{
+                        this.preDash ++;
+                    }
+                    console.log(preDash.childNodes)
+                    const child = preDash.childNodes[0]
+                    preDash.removeChild(child)
+                    preDash.classList.remove("dash-tab")
+                    dash.classList.add('dash-tab')
+                    dash.appendChild(child)
+                    this.activeDash ++;
+                },4500)
+            }
+        },
+        mounted() {
+            this.changeContainer()
         }
     }
 </script>
@@ -51,7 +88,7 @@
     }
 
     .container{
-        padding: 80px 0 55px 6%;
+        padding: 80px 0 40px 6%;
     }
 
     .container>p,h1,h2,h3,h4,h5{
@@ -73,5 +110,39 @@
     .normal{
         margin: 7px 0 0 0;
         width: 70px;
+    }
+    .dash{
+        height: 4px;
+        width: 4px;
+        border-radius: 50% 50%;
+        background-color: white;
+        margin-left: 3px;
+        opacity: 0.5;
+        transition: 0.2s;
+        background-color: rgba(255,255,255,0.5)
+    }
+
+    .dash-active{
+        animation:turnColor 5s infinite ;
+        width: 15px;
+        border-radius: 2px;
+        height: 4px;
+        background-color: white;
+        transform-origin:0% center;
+    }
+
+    @keyframes turnColor {
+        0%{
+            transform: scaleX(0);
+            color: white;
+        }
+        100%{
+            transform: scaleX(1);
+            color: white;
+        }
+    }
+
+    .dash-tab{
+        width: 15px;border-radius: 2px;
     }
 </style>

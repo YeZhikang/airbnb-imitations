@@ -16,6 +16,31 @@
           </div>
           <div style="min-width: 6%"></div>
         </div>
+        <div class="slide" style="margin-top: 18px">
+          <div class="room-info"  v-for="(room,index) in roomArr " :key="index">
+            <div class="room-img"  :style="{backgroundImage:roomArr[index].imgUrl}">
+            </div>
+            <div style="margin-top: 5px;white-space: normal;text-overflow:ellipsis;">
+              <p style="color: #9b3143;font-size: 11px;font-weight: 500">整间阁楼·1室1.5卫1床</p>
+              <div class="room-intro" style=" font-size: 14px;color: rgb(55,55,55);max-height: 40px;line-height: 20px;text-overflow:ellipsis;overflow: hidden">ONEHOUSE一间/ loft/投影仪/宽窄巷子/夜猫子
+              </div>
+              <div style="font-size: 10px;font-weight: 300">每晚 ¥241</div>
+              <div style="display: flex;justify-content: flex-start;align-items: center">
+                <img src="../assets/stars.png" alt="5星" style="height: 16px">
+                <div style="font-weight: 500;font-size: 12px;margin-left: 5px;">163</div>
+              </div>
+            </div>
+          </div>
+          <div style="min-width: 6%"></div>
+        </div>
+        <div
+          class="normal"
+          style="font-size: 14px;
+            line-height: 20px;color: rgb(56,130,136);border-color: rgb(56,130,136);width: 88%;margin: 20px auto;
+            padding: 7px 0;font-weight: 500"
+        >
+          查看更多{{selected.name}}的房源
+        </div>
       </div >
     </div>
   </div>
@@ -31,6 +56,36 @@
     data(){
       return{
         isTrue:true,
+        roomArr:[
+          {
+            context:'',
+            intro: '',
+            price: '',
+            comment: [5,188],
+            imgUrl:'url(https://z1.muscache.cn/im/pictures/cd1b77e4-28ea-42f0-a5be-84cec48959cd.jpg?aki_policy=large)'
+          },
+          {
+            context:'',
+            intro: '',
+            price: '',
+            comment: [5,188],
+            imgUrl:'url(https://z1.muscache.cn/im/pictures/96e9dbb4-65c3-4710-b0cd-5ff70fdaa6b6.jpg?aki_policy=large)'
+          },
+          {
+            context:'',
+            intro: '',
+            price: '',
+            comment: [5,188],
+            imgUrl:'url(https://z1.muscache.cn/im/pictures/cd1b77e4-28ea-42f0-a5be-84cec48959cd.jpg?aki_policy=large)'
+          },
+          {
+            context:'',
+            intro: '',
+            price: '',
+            comment: [5,188],
+            imgUrl:'url(https://z1.muscache.cn/im/pictures/96e9dbb4-65c3-4710-b0cd-5ff70fdaa6b6.jpg?aki_policy=large)'
+          }
+        ],
         cityArr:[
           {
             name: "成都",
@@ -58,7 +113,12 @@
             info: '19000+房源',
             isSelected: false,
           }],
-        recent: 0
+        recent: 0,
+        selected:{
+          name: "成都",
+          info: '19000+房源',
+          isSelected: true,
+        }
       }
     },
     components: {IndexHeader},
@@ -67,6 +127,7 @@
         this.cityArr[index].isSelected = true
         this.cityArr[this.recent].isSelected = false
         this.recent = index
+        this.selected = this.cityArr[index]
       }
     }
   }
@@ -112,6 +173,9 @@
     margin-right: 0;
   }
 
+  .room-info:nth-child(4){
+    margin-right: 0;
+  }
 
 
 
@@ -126,7 +190,7 @@
     overflow: hidden;
     width: 76px;
     height: 58px;
-    border-radius: 6px;
+    border-radius: 4px;
     background-color: rgb(248,248,248);
     transition: 0.3s ease;
   }
@@ -145,6 +209,31 @@
 
   .city-info>p{
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 300;
   }
+
+  .room-info{
+    min-width: 177px;
+    margin-right: 8px;
+    width: 177px;
+    /*background-image: url(https://z1.muscache.cn/im/pictures/96e9dbb4-65c3-4710-b0cd-5ff70fdaa6b6.jpg?aki_policy=large);*/
+  }
+
+  .room-img{
+    height: 118px;
+    background-size: cover;
+    width: 100%;
+  }
+
+  .room-info:first-child{
+    margin-left: 6%;
+  }
+
+  .room-intro{
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: 500;
+  }
+
+
 </style>
