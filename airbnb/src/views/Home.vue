@@ -110,7 +110,7 @@
             <p class="room-context" style="font-size: 14px;line-height: 16px;font-weight: 800;margin: 3px 0;word-wrap: normal">{{experience.title}}</p>
             <p class="room-price">{{experience.price}}</p>
             <div style="display: flex;justify-content: flex-start;align-items: center;">
-              <div class="exp-comment-num" style="margin-left: 0">{{experience.score[0]}}</div>
+              <div class="exp-comment-num" style="margin-left: 0;">{{experience.score[0]}}</div>
               <img src="../assets/stars.png" alt="5星" style="height: 16px;margin-left: 3px">
               <div class="exp-comment-num2">(163)</div>
             </div>

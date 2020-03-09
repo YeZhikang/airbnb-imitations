@@ -87,3 +87,67 @@ title{
     padding-left: 6px;
     color: rgb(111,111,111);
 }
+
+.city-history{
+    color: rgb(72, 72, 72) !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    margin-right: 8px !important;
+    margin-bottom: 8px !important;
+    border-width: 0.5px !important;
+    border-style: solid !important;
+    border-color: rgb(219, 220, 221) !important;
+    border-image: initial !important;
+    border-radius: 3px !important;
+    padding: 12px 16px !important;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.city-pop{
+    color: rgb(72, 72, 72) !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    margin-right: 8px !important;
+    margin-bottom: 8px !important;
+    border-width: 0.5px !important;
+    border-style: solid !important;
+    border-color: rgb(219, 220, 221) !important;
+    border-image: initial !important;
+    border-radius: 3px !important;
+    padding: 16px !important;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+
+.city-option{
+    font-size: 12px !important;
+    margin-right: 32px !important;
+    margin-bottom: 16px !important;
+    padding: 16px 0px !important;
+    font-size: 12px !important;
+    border:2px;
+    background-color: white;
+}
+
+.city-option-active{
+    margin-right: 32px !important;
+    margin-bottom: 16px !important;
+    color: rgb(0, 132, 137) !important;
+    padding: 16px 0px !important;
+    border-bottom: 2px solid rgb(0, 132, 137) !important;
+    background-color: white;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+button{
+    outline: none;
+}
