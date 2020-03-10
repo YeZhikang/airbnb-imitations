@@ -37,34 +37,39 @@
                     }
                 ],
                 activeDash:1,
-                preDash:0
+                preDash:0,
+                interval: null,
             }
         },
         methods:{
             changeContainer(){
-                setInterval(() => {
-                    let dash = document.getElementsByClassName('dash')[this.activeDash]
-                    let preDash = document.getElementsByClassName('dash')[this.preDash]
-                    if(!dash){
-                        preDash = document.getElementsByClassName('dash')[this.activeDash - 1];
-                        this.activeDash = 0
-                        dash = document.getElementsByClassName('dash')[this.activeDash]
-                        this.preDash = 0;
-                    }else{
-                        this.preDash ++;
+                this.interval = setInterval(() => {
+                    try {
+                        let dash = document.getElementsByClassName('dash')[this.activeDash]
+                        let preDash = document.getElementsByClassName('dash')[this.preDash]
+                        if (!dash) {
+                            preDash = document.getElementsByClassName('dash')[this.activeDash - 1];
+                            this.activeDash = 0;
+                            dash = document.getElementsByClassName('dash')[this.activeDash]
+                            this.preDash = 0;
+                        } else {
+                            this.preDash++;
+                        }
+                        const child = preDash.childNodes[0]
+                        preDash.removeChild(child)
+                        preDash.classList.remove("dash-tab")
+                        dash.classList.add('dash-tab')
+                        dash.appendChild(child)
+                        this.activeDash++;
+                    }catch (e) {
+                        clearInterval(this.interval)
                     }
-                    const child = preDash.childNodes[0]
-                    preDash.removeChild(child)
-                    preDash.classList.remove("dash-tab")
-                    dash.classList.add('dash-tab')
-                    dash.appendChild(child)
-                    this.activeDash ++;
                 },8000)
             },
         },
         mounted() {
             this.changeContainer()
-        }
+        },
     }
 </script>
 

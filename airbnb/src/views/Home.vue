@@ -329,7 +329,7 @@
         this.recent = index
         this.selected = this.cityArr[index]
       }
-    }
+    },
   }
 </script>
 
