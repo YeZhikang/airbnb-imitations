@@ -50,7 +50,8 @@
                 isActive: true,
                 cityArrLocal:["北京","上海","成都","重庆","杭州","厦门","广州","西安"],
                 cityI18n: ['大阪','东京','台北','香港','京都','曼谷','首尔','清迈'],
-                searchedRes: []
+                searchedRes: [],
+                searchLoading:false,
             }
         },
         mounted() {
@@ -67,8 +68,10 @@
             getLocationRes(){
                 searchLocation(this.cityInput).then(res => {
                     this.searchedRes = res.autocomplete_terms
-                    console.log(this.searchedRes)
-                }).catch(error => console.log(error))
+                }).catch(error =>  {
+                    console.log(error)
+                })
+
             },
             debounce(fn,delay){
                 let time;
