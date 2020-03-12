@@ -13,6 +13,11 @@ const routes = [
     path: '/SearchCity',
     name: 'SearchCity',
     component: () => import('../views/SearchCity')
+  },
+  {
+    path: '/rooms/:hash',
+    name: 'rooms',
+    component: () => import('../views/TheRooms')
   }
 
 ]

@@ -1,0 +1,154 @@
+*{
+    margin:0
+}
+.rooms-header{
+    width: 100%;
+}
+
+.container{
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    left: 7%;
+    margin-top: 20px;
+    display: flex;
+    width: 86%;
+}
+
+.bg1{
+    width: 100%;
+}
+
+.bg{
+    width: 100%;
+    height: 240px;
+    background-image:url("https://z1.muscache.cn/im/pictures/7cc3c855-f90e-4d0f-9b13-3b5c2a3c4bad.jpg?aki_policy=xx_large");
+    background-size: cover;
+    background-position: 99% 99%;
+}
+
+.room-intro{
+    padding: 16px 24px;
+    border-bottom:1px solid rgb(240,240,240)
+}
+
+.room-lil-intro{
+    font-size: 12px;
+    font-weight: 500;
+    color: #734f21
+}
+.sp-tag{
+    font-size:12px;
+    padding:6px 10px;
+    font-weight: 800;
+    margin-left: 7px;
+    border-radius: 3px
+}
+.sp-tag:first-child{
+    margin-left: 0
+}
+.sp-tag-comment{
+    color:#296E00 !important;
+    background-color:#EAF7EA;
+}
+.sp-tag-info{
+    color:#8A2400 !important;
+    background-color: #f7f3ea !important
+}
+
+.sp-tag-gray{
+    background-color: #F2F2F2 !important;
+    color: #484848;
+}
+
+.check-info{
+    color: rgb(0, 132, 137) !important;
+    font-weight: 500;
+    margin-top: 20px;
+    font-size: 14px
+}
+.logo{
+    width: 24px;
+    height: 24px;
+    background-size:cover;
+    border-radius: 50%
+}
+
+.room-detail{
+    border-top:8px solid rgb(222,222,222,0.4);
+}
+
+.check-info{
+    cursor: pointer;
+}
+
+.fxal{
+    display: flex;
+    align-items: center
+}
+
+.comment-font{
+    font-size: 14px;
+    margin-right: 8px;
+    font-weight: 300
+}
+
+.fxbt{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fxar{
+    display: flex;
+    justify-content: space-around
+}
+
+.mt10{
+    margin-top: 10px;
+}
+
+.mt20{
+    margin-top: 20px
+}
+
+.mt25{
+    margin-top: 25px
+}
+
+.mt30{
+    margin-top: 30px
+}
+
+.ml10{
+    margin-left: 10px
+}
+
+.ml15{
+    margin-left: 15px
+}
+
+.mt15{
+    margin-top: 15px
+}
+
+
+
+.round{
+    border-radius: 50% 50%
+}
+.avatar-small{
+    width: 48px;
+    height: 48px;
+}
+
+.font-small{
+    font-size: 12px;
+}
+
+.font-mid{
+    font-size: 14px
+}
+
+.wb{
+    word-break: keep-all
+}
