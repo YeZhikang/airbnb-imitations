@@ -4,9 +4,7 @@
   </div>
 </template>
 
-<script>
 
-</script>
 <style>
 
   html,body,#app{

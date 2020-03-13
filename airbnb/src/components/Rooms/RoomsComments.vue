@@ -1,7 +1,7 @@
 <template>
   <div class="page">
       <div class="room-detail">
-        <div class="room-intro">
+        <div class="room-room-intro">
             <div class="block" style="margin-top:0;display:flex;justify-content:space-between">
                 <h5>房客评价</h5>
                 <div class="fxal">
@@ -84,5 +84,5 @@
 
 <style scoped >
 
- 
+
 </style>

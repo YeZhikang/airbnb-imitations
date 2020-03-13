@@ -2,7 +2,7 @@
   <div class="page">
     <div class="page">
       <div class="room-detail">
-        <div class="room-intro">
+        <div class="room-room-intro">
           <h5>房东</h5>
           <div class="block fxal mt20">
             <img class="round avatar-small" :src="ownerInfo.avatarImg" />

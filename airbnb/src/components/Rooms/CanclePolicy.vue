@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="room-detail">
-      <div class="room-intro">
+      <div class="room-room-intro">
         <div @click="checkPolicy" class="block fxal fxbt">
           <div>
             <h5>退订政策</h5>

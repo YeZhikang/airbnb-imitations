@@ -1,7 +1,7 @@
 <template>
   <div class="page">
      <div class="room-detail">
-        <div class="room-intro">
+        <div class="room-room-intro">
           <div class="block fxal fxbt" style="margin-top:0;">
             <div>
               <h5>房源位置</h5>

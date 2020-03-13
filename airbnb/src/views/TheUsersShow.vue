@@ -51,7 +51,6 @@
 </template>
 
 <script>
-    import '../static/css/rooms.css'
 
     import UsersHeader from "../components/users/UsersHeader";
     export default {
@@ -93,6 +92,8 @@
 </script>
 
 <style scoped>
+    @import '../static/css/rooms.css';
+
     .main-block{
         padding-top: 96px;
     }
@@ -108,4 +109,5 @@
     .menu-block:last-child{
         border: none;
     }
+
 </style>
