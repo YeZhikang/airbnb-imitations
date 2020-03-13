@@ -18,6 +18,11 @@ const routes = [
     path: '/rooms/:hash',
     name: 'rooms',
     component: () => import('../views/TheRooms')
+  },
+  {
+    path: '/users/show/:userId',
+    name: 'usersShow',
+    component: () => import('../views/TheUsersShow')
   }
 
 ]

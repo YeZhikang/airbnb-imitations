@@ -15,7 +15,7 @@
           <div @click="closeMap()" style="position:fixed;left:20px;top:20px;z-index:2000;padding:15px;background-color:white;border-radius:50%;box-shadow:0 0 6px darkgray">
             <svg viewBox="0 0 12 12" role="img" aria-label="关闭" focusable="false" style="height: 12px; width: 12px; display: block; fill: currentcolor;"><path d="m11.5 10.5c.3.3.3.8 0 1.1s-.8.3-1.1 0l-4.4-4.5-4.5 4.5c-.3.3-.8.3-1.1 0s-.3-.8 0-1.1l4.5-4.5-4.4-4.5c-.3-.3-.3-.8 0-1.1s.8-.3 1.1 0l4.4 4.5 4.5-4.5c.3-.3.8-.3 1.1 0s .3.8 0 1.1l-4.5 4.5z" fill-rule="evenodd"></path></svg>
           </div>
-      </div> 
+      </div>
   </div>
 </template>
 
@@ -34,7 +34,7 @@
       }
     },
     components: {
-      
+
     },
     methods:{
       checkMap(){
@@ -49,7 +49,7 @@
           MapLoader().then(AMap => {
             console.log('地图加载成功')
             that.map = new AMap.Map('container', {
-              center: [117.000923, 36.675807],
+              center: [110.000923, 30.675807],
               zoom: 11
             })
           }, e => {
@@ -67,7 +67,7 @@
       }
     },
     mounted(){
-      
+
     },
   }
 </script>
@@ -85,5 +85,5 @@
   from {transform: scaleY(0)}
   to {transform: scaleY(1)}
 }
- 
+
 </style>

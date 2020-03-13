@@ -103,6 +103,10 @@
     justify-content: space-around
 }
 
+.mb15{
+    margin-bottom: 15px;
+}
+
 .mt10{
     margin-top: 10px;
 }
@@ -136,6 +140,7 @@
 .round{
     border-radius: 50% 50%
 }
+
 .avatar-small{
     width: 48px;
     height: 48px;
@@ -151,4 +156,82 @@
 
 .wb{
     word-break: keep-all
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    transform-origin: 0% 0%;
+    z-index: 666;
+    overflow-y: scroll;
+    background-color: white;
+    animation: collpased 0.3s;
+}
+
+@keyframes collpased {
+    from {transform: scaleY(0)}
+    to {transform: scaleY(1)}
+}
+
+.main-block{
+    width: 88%;
+    margin: 0 auto;
+}
+
+.normal-font{
+    font-weight: 400;
+}
+
+
+.light-font{
+    font-weight: 300;
+}
+
+.strong-font{
+    font-weight: 700;
+}
+
+.menu-block{
+    padding: 25px 0 25px 0;
+    font-weight: 300;
+    border-bottom: 1px solid #eeeeee;
+}
+.menu-block h4{
+    padding: 0 0 26px 0;
+}
+.menu-block h4:last-child{
+    padding: 0;
+}
+.menu-main{
+    width: 88%;
+    margin: 0 auto;
+}
+.menu-block:last-child{
+    border:none
+}
+
+.round-avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link{
+    color: #484848;
+}
+
+a:visited{
+    color: #484848;
+}
+a:hover{
+    color: #484848;
+}
+a:active{
+    color: #484848;
 }
