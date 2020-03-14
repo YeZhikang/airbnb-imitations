@@ -10,3 +10,20 @@ export function searchLocation(data) {
     })
 }
 
+export function userLogin(data) {
+    return instance({
+        url: '/users/login',
+        method: 'post',
+        data: {
+            phoneNumber: data.phoneNumber
+        }
+    })
+}
+
+export function register(data) {
+    return instance({
+        url: '/users/register',
+        method: 'post',
+        data
+    })
+}

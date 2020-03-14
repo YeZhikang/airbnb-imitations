@@ -5,7 +5,7 @@
         </div>
         <h2 class="normal-font mt30">账号密码登录</h2>
         <div style="margin-top: 30px;width: 100%">
-            <input v-model="user.account" type="text" style="height: 44px;padding-left: 16px;font-size: 18px;width: 92%" class="standard-input light-font accound-text" placeholder="邮箱地址/手机号码">
+            <input v-model="user.email" type="text" style="height: 44px;padding-left: 16px;font-size: 18px;width: 92%" class="standard-input light-font accound-text" placeholder="邮箱地址/手机号码">
             <div  class="mt20 fxal" style="width: 100%;border: 1px solid lightgrey;border-radius: 3px">
                 <input @input="pressPassword" v-model="user.password" type="password" style="height: 44px;padding-left: 16px;font-size: 18px;width: 92%;border: none" class="standard-input light-font password" placeholder="密码">
                 <div @click="handleClose()" style="padding: 0 10px">
@@ -34,12 +34,14 @@
             </div>
         </div>
         <div class="mt20">
-            <button class="normal-button mt25 normal-button-disabled">立即登录</button>
+            <button @click="handleSubmit" class="normal-button mt25 normal-button-disabled">立即登录</button>
         </div>
     </div>
 </template>
 
 <script>
+    import {userLogin} from "../../api/location";
+
     export default {
         name: "PasswordLogin",
         data(){
@@ -47,7 +49,7 @@
                 isClosed:true,
                 isRemeber:false,
                 user:{
-                    account: '',
+                    email: '',
                     password: ''
                 },
                 loginButton: null,
@@ -74,13 +76,20 @@
                 this.isRemeber = !this.isRemeber
             },
             pressPassword(){
-                if(this.user.password.length >= 3 && this.user.account.length > 0){
+                if(this.user.password.length >= 3 && this.user.email.length > 0){
                     this.loginButton.style.opacity = '1'
                 }else{
                     this.loginButton.style.opacity = '0.5'
                 }
             },
-
+            handleSubmit(){
+                userLogin({...this.user}).then(res => {
+                    console.log({...this.user})
+                    if(res.code === 200){
+                        this.$router.go(-1)
+                    }
+                }).catch(error => console.log(error))
+            }
         }
     }
 

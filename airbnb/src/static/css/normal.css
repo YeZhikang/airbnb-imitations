@@ -66,3 +66,20 @@ a:link{
     align-items: center
 }
 
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    transform-origin: 100% 100%;
+    z-index: 666;
+    overflow-y: scroll;
+    background-color: white;
+    animation: collpased 0.3s;
+}
+
+@keyframes collpased {
+    from {transform: scaleY(0)}
+    to {transform: scaleY(1)}
+}

@@ -26,6 +26,7 @@
 
 <script>
     import '../../static/css/rooms.css'
+
     export default {
         name: "PhoneLogin",
         data(){

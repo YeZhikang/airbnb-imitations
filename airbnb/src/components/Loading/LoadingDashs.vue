@@ -1,14 +1,20 @@
 <template>
-    <div style="display: flex;">
-        <div class="dash"></div>
-        <div class="dash"></div>
-        <div class="dash"></div>
+    <div style="display: flex;justify-content: center">
+        <div :class="{dash: true,'cyan-loading': type ==='cyan','white-loading': type === 'white'}"></div>
+        <div :class="{dash: true,'cyan-loading': type ==='cyan','white-loading': type === 'white'}"></div>
+        <div :class="{dash: true,'cyan-loading': type ==='cyan','white-loading': type === 'white'}"></div>
     </div>
 </template>
 
 <script>
     export default {
         name: "LoadingDashs",
+        props:{
+            type: {
+                type: String,
+                default: 'cyan'
+            }
+        },
         methods:{
             blink(){
                 const dashes = document.getElementsByClassName('dash')
@@ -31,8 +37,14 @@
         margin-right: 7px;
         height: 10px;
         border-radius: 50% 50%;
-        background-color: rgb(0,139,139);
         transition: 2s;
+    }
+
+    .cyan-loading{
+        background-color: rgb(0,139,139);
+    }
+    .white-loading{
+        background-color: rgb(188,188,188);
     }
 
     .dash-blink{
