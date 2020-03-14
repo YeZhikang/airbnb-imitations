@@ -1,0 +1,68 @@
+a{
+    text-decoration: none;
+    color: rgb(111,111,111);
+}
+
+a:link{
+
+}
+
+.round-avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.menu-main{
+    width: 88%;
+    margin: 0 auto;
+}
+
+.mb15{
+    margin-bottom: 15px;
+}
+
+.mt10{
+    margin-top: 10px;
+}
+
+.mt20{
+    margin-top: 20px
+}
+
+.mt25{
+    margin-top: 25px
+}
+
+.mt30{
+    margin-top: 30px
+}
+
+.ml10{
+    margin-left: 10px
+}
+
+.ml15{
+    margin-left: 15px
+}
+
+.mt15{
+    margin-top: 15px
+}
+
+
+.fxbt{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fxar{
+    display: flex;
+    justify-content: space-around
+}
+
+.fxal{
+    display: flex;
+    align-items: center
+}
+

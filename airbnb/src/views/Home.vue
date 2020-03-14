@@ -17,14 +17,14 @@
           <div style="min-width: 6%"></div>
         </div>
         <div class="slide" style="margin-top: 18px">
-          <div class="room-info"  v-for="(room,index) in roomArr " :key="index">
+          <div class="room-info"  v-for="(room,index) in roomArr " :key="index" @click="handleRoomPush(room)">
             <div class="room-img"  :style="{backgroundImage:roomArr[index].imgUrl}">
             </div>
             <div style="margin-top: 5px;white-space: normal;text-overflow:ellipsis;">
-              <p style="color: #9b3143;font-size: 11px;font-weight: 500">整间阁楼·1室1.5卫1床</p>
-              <div class="room-intro" style=" font-size: 14px;color: rgb(55,55,55);max-height: 40px;line-height: 20px;text-overflow:ellipsis;overflow: hidden">ONEHOUSE一间/ loft/投影仪/宽窄巷子/夜猫子
+              <p style="color: #9b3143;font-size: 11px;font-weight: 500">{{room.context}}</p>
+              <div class="room-intro" style=" font-size: 14px;color: rgb(55,55,55);max-height: 40px;line-height: 20px;text-overflow:ellipsis;overflow: hidden">{{room.intro}}
               </div>
-              <div style="font-size: 10px;font-weight: 300">每晚 ¥241</div>
+              <div style="font-size: 10px;font-weight: 300">{{room.price}}</div>
               <div style="display: flex;justify-content: flex-start;align-items: center">
                 <img src="../assets/stars.png" alt="5星" style="height: 16px">
                 <div style="font-weight: 500;font-size: 12px;margin-left: 5px;">163</div>
@@ -132,7 +132,7 @@
             <option value="CNY 人民币">CNY 人民币</option>
             <option value="USD 美元">USD 美元</option>
           </select>
-          <div class="link">注册/登录</div>
+          <div class="link"><router-link :to="{name:'login'}">注册/登录</router-link></div>
           <div class="link">下载应用</div>
           <div class="link">帮助</div>
           <div class="link">网站地图</div>
@@ -164,30 +164,30 @@
         isTrue:true,
         roomArr:[
           {
-            context:'',
-            intro: '',
-            price: '',
+            context:'整间阁楼·1室1.5卫1床',
+            intro: 'ONEHOUSE一间/ loft/投影仪/宽窄巷子/夜猫子',
+            price: '每晚 ¥241',
             comment: [5,188],
             imgUrl:'url(https://z1.muscache.cn/im/pictures/cd1b77e4-28ea-42f0-a5be-84cec48959cd.jpg?aki_policy=large)'
           },
           {
-            context:'',
-            intro: '',
-            price: '',
+            context:'整间阁楼·1室1.5卫1床',
+            intro: 'ONEHOUSE一间/ loft/投影仪/宽窄巷子/夜猫子',
+            price: '每晚 ¥241',
             comment: [5,188],
             imgUrl:'url(https://z1.muscache.cn/im/pictures/96e9dbb4-65c3-4710-b0cd-5ff70fdaa6b6.jpg?aki_policy=large)'
           },
           {
-            context:'',
-            intro: '',
-            price: '',
+            context:'整间阁楼·1室1.5卫1床',
+            intro: 'ONEHOUSE一间/ loft/投影仪/宽窄巷子/夜猫子',
+            price: '每晚 ¥241',
             comment: [5,188],
             imgUrl:'url(https://z1.muscache.cn/im/pictures/cd1b77e4-28ea-42f0-a5be-84cec48959cd.jpg?aki_policy=large)'
           },
           {
-            context:'',
-            intro: '',
-            price: '',
+            context:'整间阁楼·1室1.5卫1床',
+            intro: 'ONEHOUSE一间/ loft/投影仪/宽窄巷子/夜猫子',
+            price: '每晚 ¥241',
             comment: [5,188],
             imgUrl:'url(https://z1.muscache.cn/im/pictures/96e9dbb4-65c3-4710-b0cd-5ff70fdaa6b6.jpg?aki_policy=large)'
           }
@@ -328,6 +328,14 @@
         this.cityArr[this.recent].isSelected = false
         this.recent = index
         this.selected = this.cityArr[index]
+      },
+      handleRoomPush(room){
+        this.$router.push({
+          name: 'rooms',
+          params:{
+            roomId: room.roomId
+          }
+        })
       }
     },
   }

@@ -15,7 +15,7 @@ const routes = [
     component: () => import('../views/SearchCity')
   },
   {
-    path: '/rooms/:hash',
+    path: '/rooms/:roomId',
     name: 'rooms',
     component: () => import('../views/TheRooms')
   },
