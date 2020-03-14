@@ -8,7 +8,7 @@
         <div class="mt20">
             <input
                 class="identify-input"
-                type="text"
+                type="tel"
                 maxlength="1"
                 @focus="turnColor(index)"
                 @blur="turnBackColor(index)"
@@ -19,7 +19,7 @@
             >
         </div>
         <div class="mt30">
-            <loading-dashs/>
+            <loading-dashs v-if="inputArr.length === 6"/>
         </div>
     </div>
 </template>
@@ -80,6 +80,7 @@
 <style scoped>
     .identify-input{
         -webkit-appearance: none;
+        outline: none;
         border: 1px solid #e9e9e9;
         width: 35px;
         height: 43px;
