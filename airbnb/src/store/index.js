@@ -11,6 +11,10 @@ export default new Vuex.Store({
     }
   },
   mutations: {
+    updateUserInfo(state,user){
+      console.log(user)
+      state.userInfo = {phoneNumber: user['phoneNumber'], email: user['email']}
+    }
   },
   actions: {
   },

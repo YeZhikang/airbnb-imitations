@@ -25,7 +25,6 @@
 
 <script>
     import IndexSearching from "./IndexSearching";
-    import {getUserInfo} from "../../api/location";
     export default {
         name: "IndexHeader",
         components: {IndexSearching},
@@ -40,6 +39,7 @@
                 activeDash:1,
                 preDash:0,
                 interval: null,
+                userDoc:null
             }
         },
         methods:{
@@ -68,9 +68,8 @@
                 },8000)
             },
             getUserInfo(){
-                getUserInfo().then(res => {
-                    console.log(res)
-                })
+                this.userDoc = this.$store.state.userInfo
+                console.log(this.userDoc)
             }
         },
         mounted() {
