@@ -1,4 +1,5 @@
 import axios from 'axios'
+import router from "../router";
 
 const instance = axios.create({
     timeout: 1000,
@@ -32,6 +33,9 @@ instance.interceptors.request.use((config) => {
 // 添加响应拦截器
 instance.interceptors.response.use((response) => {
     if(response.status === 200){
+        if(response.data.needAuthorization){
+            router.push({name: 'login'})
+        }
         return Promise.resolve(response.data)
     }else{
         return Promise.reject(response)

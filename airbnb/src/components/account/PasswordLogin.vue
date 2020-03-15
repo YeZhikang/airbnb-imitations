@@ -15,7 +15,6 @@
                 <!--                <div style="display: table-cell">-->
 <!--                    <input @input="pressPassword" v-model="user.password" type="password" style="height: 44px;padding-left: 16px;font-size: 18px;width: 100%;border: none" class="standard-input light-font password" placeholder="密码">-->
 <!--                </div>-->
-
             </div>
         </div>
         <div class="fxal fxbt mt25">
@@ -85,7 +84,8 @@
             handleSubmit(){
                 userLogin({...this.user}).then(res => {
                     console.log({...this.user})
-                    if(res.code === 200){
+                    if(res.TOKEN){
+                        localStorage.setItem('token',res.TOKEN)
                         this.$router.go(-1)
                     }
                 }).catch(error => console.log(error))

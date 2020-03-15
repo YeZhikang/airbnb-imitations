@@ -93,7 +93,8 @@
                 userLogin({phoneNumber}).then(res => {
                     console.log(res)
                     if(res.code === 200){
-                        if(res.isRegistered){
+                        if(res.TOKEN){
+                            localStorage.setItem('token',res.TOKEN)
                             this.$router.go(-1)
                         }else{
                             this.isChecking = true

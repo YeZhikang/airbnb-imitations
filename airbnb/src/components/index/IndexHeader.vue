@@ -25,6 +25,7 @@
 
 <script>
     import IndexSearching from "./IndexSearching";
+    import {getUserInfo} from "../../api/location";
     export default {
         name: "IndexHeader",
         components: {IndexSearching},
@@ -66,9 +67,15 @@
                     }
                 },8000)
             },
+            getUserInfo(){
+                getUserInfo().then(res => {
+                    console.log(res)
+                })
+            }
         },
         mounted() {
             this.changeContainer()
+            this.getUserInfo()
         },
     }
 </script>

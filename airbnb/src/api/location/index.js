@@ -27,3 +27,13 @@ export function register(data) {
         data
     })
 }
+
+/**
+ * 利用Token进行初次获取用户信息的操作
+ */
+export function getUserInfo() {
+    return instance({
+        url: '/users/getUserInfo',
+        method: 'get',
+    })
+}
