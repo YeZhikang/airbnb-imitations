@@ -83,3 +83,19 @@ a:link{
     from {transform: scaleY(0)}
     to {transform: scaleY(1)}
 }
+
+.cyan-color{
+    color: #008489;
+}
+
+.font-small{
+    font-size: 12px;
+}
+
+.font-mid{
+    font-size: 14px;
+}
+
+.light-font{
+    font-weight: 300;
+}

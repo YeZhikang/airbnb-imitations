@@ -224,7 +224,7 @@
         </div>
       </div>
     </div>
-    <user-folder v-if="userBar" />
+
   </div>
 </template>
 
@@ -234,16 +234,13 @@
   import "../static/css/card.css";
   import "../static/css/font.css";
   import "../static/css/input.css";
-
   // @ is an alias to /src
   import IndexHeader from "../components/index/IndexHeader";
-  import UserFolder from "../components/index/UserFolder";
   export default {
     name: "Home",
     data() {
       return {
         isTrue: true,
-        userBar: false,
         roomArr: [
           {
             context: "整间阁楼·1室1.5卫1床",
@@ -424,7 +421,7 @@
         ]
       };
     },
-    components: { UserFolder, IndexHeader },
+    components: { IndexHeader },
     methods: {
       selectedCity(index) {
         if (index === this.recent) {
@@ -442,7 +439,11 @@
             roomId: room.roomId
           }
         });
-      }
+      },
+
+    },
+    mounted() {
+
     }
   };
 </script>
